@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$text = $event['message'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			$userId = $event['source']['userId'];
@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'ตี๋ เลิฟเลิฟ โอ๋ๆ'
+				'text' => json_encode($text)
 			];
 
 
@@ -43,7 +43,8 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			
-			if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	$result = curl_exec($ch);
+			#if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	
+			$result = curl_exec($ch);
 			curl_close($ch);
 
 			echo $result . "\r\n";
