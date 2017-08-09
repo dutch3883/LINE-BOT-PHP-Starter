@@ -84,7 +84,7 @@ if (!is_null($events['events'])) {
 			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			
 			//if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	
-			echo $data;
+			echo json_encode($data);
 			// if($text== "show") $result = curl_exec($ch);
 			// curl_close($ch);
 
