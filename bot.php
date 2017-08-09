@@ -10,9 +10,9 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' ) {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$messages = $event['message'];
+			$test = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			$userId = $event['source']['userId'];
@@ -23,7 +23,47 @@ if (!is_null($events['events'])) {
 			// 	'text' => json_encode($text)
 			// ];
 
-
+			$messages = [
+				'type'	=> 'carousel',
+				'columns' => [
+					[
+						'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+						'title' => 'test carousel',
+						'text' => 'Select Where to eat today',
+						'actions' => [
+							[
+								'type' => 'postback',
+								'lable' => 'Kuayteaw',
+								'data' => 'response=true&result=1'
+							],
+							[
+								'type' => 'postback',
+								'lable' => 'floor 2 parking building',
+								'data' => 'response=true&result=2'
+							],
+							
+						]
+					],
+					[
+						'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+						'title' => 'test carousel',
+						'text' => 'Wont eat',
+						'actions' => [
+							[
+								'type' => 'postback',
+								'lable' => 'drink coffee',
+								'data' => 'response=true&result=1'
+							],
+							[
+								'type' => 'postback',
+								'lable' => 'sleep',
+								'data' => 'response=true&result=2'
+							],
+							
+						]
+					]
+				]
+			]
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -44,7 +84,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			
 			#if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	
-			$result = curl_exec($ch);
+			if($text== "show") $result = curl_exec($ch);
 			curl_close($ch);
 
 			echo $result . "\r\n";
