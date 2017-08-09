@@ -83,7 +83,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			
-			if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	
 
 			$result = curl_exec($ch);
 			curl_close($ch);
