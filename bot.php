@@ -18,10 +18,10 @@ if (!is_null($events['events'])) {
 			$userId = $event['source']['userId'];
 			
 			//Build message to reply back
-			$messages1 = [
-				'type' => 'text',
-				'text' => 'replyToken: '.$replyToken
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => 'replyToken: '.$replyToken
+			// ];
 
 			$messages = [
 				'type' => 	'template',
@@ -77,7 +77,7 @@ if (!is_null($events['events'])) {
 			
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages1,$messages],
+				'messages' => [$messages],
 			];
 
 			$post = json_encode($data);
