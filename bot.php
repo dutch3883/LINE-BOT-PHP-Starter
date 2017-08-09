@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 								],
 								[
 									'type' => 'postback',
-									'label' => 'floor 2 parking building',
+									'label' => 'floor 2',
 									'data' => 'response=true&result=2',
 									'text' => 'floor 2 parking building'
 								]
@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 			// 	'type' => 'text',
 			// 	'text' => 'replyToken: '.$replyToken
 			// ];
-			
+
 			// $messages = [
 			// 	'type' => 'template',
 			// 	'altText' => 'this is aconfirm template',
