@@ -33,13 +33,15 @@ if (!is_null($events['events'])) {
 						'actions' => [
 							[
 								'type' => 'postback',
-								'lable' => 'Kuayteaw',
-								'data' => 'response=true&result=1'
+								'label' => 'Kuayteaw',
+								'data' => 'response=true&result=1',
+								'text' => 'Kuayteaw'
 							],
 							[
 								'type' => 'postback',
-								'lable' => 'floor 2 parking building',
-								'data' => 'response=true&result=2'
+								'label' => 'floor 2 parking building',
+								'data' => 'response=true&result=2',
+								'text' => 'floor 2 parking building'
 							]
 							
 						]
@@ -51,13 +53,15 @@ if (!is_null($events['events'])) {
 						'actions' => [
 							[
 								'type' => 'postback',
-								'lable' => 'drink coffee',
-								'data' => 'response=true&result=1'
+								'label' => 'drink coffee',
+								'data' => 'response=true&result=1',
+								'text' => 'drink coffee'
 							],
 							[
 								'type' => 'postback',
-								'lable' => 'sleep',
-								'data' => 'response=true&result=2'
+								'label' => 'sleep',
+								'data' => 'response=true&result=2',
+								'text' => 'sleep'
 							]
 						]
 					]
