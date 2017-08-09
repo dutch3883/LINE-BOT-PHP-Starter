@@ -20,11 +20,14 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'userId: '.$userId." message: ".$text
+				'text' => 'ตี๋ เลิฟเลิฟ โอ๋ๆ'
 			];
+
+
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
+			
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
@@ -39,7 +42,8 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
+			
+			// if($userId == "U2ac1c54ff5ae78e18042a8c135a2bea9")	$result = curl_exec($ch);
 			curl_close($ch);
 
 			echo $result . "\r\n";
