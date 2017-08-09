@@ -17,11 +17,11 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$userId = $event['source']['userId'];
 			
-			// Build message to reply back
-			// $messages = [
-			// 	'type' => 'text',
-			// 	'text' => json_encode($text)
-			// ];
+			//Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => 'replyToken: '.$replyToken
+			];
 
 			$messages = [
 				'type' => 	'template',
