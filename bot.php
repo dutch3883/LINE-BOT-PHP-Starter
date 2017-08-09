@@ -24,44 +24,48 @@ if (!is_null($events['events'])) {
 			// ];
 
 			$messages = [
-				'type'	=> 'carousel',
-				'columns' => [
-					[
-						'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-						'title' => 'test carousel',
-						'text' => 'Select Where to eat today',
-						'actions' => [
-							[
-								'type' => 'postback',
-								'label' => 'Kuayteaw',
-								'data' => 'response=true&result=1',
-								'text' => 'Kuayteaw'
-							],
-							[
-								'type' => 'postback',
-								'label' => 'floor 2 parking building',
-								'data' => 'response=true&result=2',
-								'text' => 'floor 2 parking building'
+				'type' => 	'template',
+				'altText' =>  'alternative text',
+				'template' => [
+					'type'	=> 'carousel',
+					'columns' => [
+						[
+							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'title' => 'test carousel',
+							'text' => 'Select Where to eat today',
+							'actions' => [
+								[
+									'type' => 'postback',
+									'label' => 'Kuayteaw',
+									'data' => 'response=true&result=1',
+									'text' => 'Kuayteaw'
+								],
+								[
+									'type' => 'postback',
+									'label' => 'floor 2 parking building',
+									'data' => 'response=true&result=2',
+									'text' => 'floor 2 parking building'
+								]
+								
 							]
-							
-						]
-					],
-					[
-						'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-						'title' => 'test carousel',
-						'text' => 'Wont eat',
-						'actions' => [
-							[
-								'type' => 'postback',
-								'label' => 'drink coffee',
-								'data' => 'response=true&result=1',
-								'text' => 'drink coffee'
-							],
-							[
-								'type' => 'postback',
-								'label' => 'sleep',
-								'data' => 'response=true&result=2',
-								'text' => 'sleep'
+						],
+						[
+							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'title' => 'test carousel',
+							'text' => 'Wont eat',
+							'actions' => [
+								[
+									'type' => 'postback',
+									'label' => 'drink coffee',
+									'data' => 'response=true&result=1',
+									'text' => 'drink coffee'
+								],
+								[
+									'type' => 'postback',
+									'label' => 'sleep',
+									'data' => 'response=true&result=2',
+									'text' => 'sleep'
+								]
 							]
 						]
 					]
