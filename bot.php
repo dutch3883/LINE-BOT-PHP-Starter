@@ -23,54 +23,107 @@ if (!is_null($events['events'])) {
 			// 	'text' => 'replyToken: '.$replyToken
 			// ];
 
-			$messages = [
-				'type' => 	'template',
-				'altText' =>  'alternative text',
-				'template' => [
-					'type'	=> 'carousel',
-					'columns' => [
-						[
-							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-							'title' => 'test carousel',
-							'text' => 'Select Where to eat today',
-							'actions' => [
-								[
-									'type' => 'postback',
-									'label' => 'Kuayteaw',
-									'data' => 'response=true&result=1',
-									'text' => 'Kuayteaw'
-								],
-								[
-									'type' => 'postback',
-									'label' => 'floor 2 parking building',
-									'data' => 'response=true&result=2',
-									'text' => 'floor 2 parking building'
-								]
+			// $messages = [
+			// 	'type' => 	'template',
+			// 	'altText' =>  'alternative text',
+			// 	'template' => [
+			// 		'type'	=> 'carousel',
+			// 		'columns' => [
+			// 			[
+			// 				'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+			// 				'title' => 'test carousel',
+			// 				'text' => 'Select Where to eat today',
+			// 				'actions' => [
+			// 					[
+			// 						'type' => 'postback',
+			// 						'label' => 'Kuayteaw',
+			// 						'data' => 'response=true&result=1',
+			// 						'text' => 'Kuayteaw'
+			// 					],
+			// 					[
+			// 						'type' => 'postback',
+			// 						'label' => 'floor 2 parking building',
+			// 						'data' => 'response=true&result=2',
+			// 						'text' => 'floor 2 parking building'
+			// 					]
 								
-							]
-						],
-						[
-							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-							'title' => 'test carousel',
-							'text' => 'Wont eat',
-							'actions' => [
-								[
-									'type' => 'postback',
-									'label' => 'drink coffee',
-									'data' => 'response=true&result=1',
-									'text' => 'drink coffee'
-								],
-								[
-									'type' => 'postback',
-									'label' => 'sleep',
-									'data' => 'response=true&result=2',
-									'text' => 'sleep'
-								]
-							]
-						]
-					]
-				]
-			];
+			// 				]
+			// 			],
+			// 			[
+			// 				'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+			// 				'title' => 'test carousel',
+			// 				'text' => 'Wont eat',
+			// 				'actions' => [
+			// 					[
+			// 						'type' => 'postback',
+			// 						'label' => 'drink coffee',
+			// 						'data' => 'response=true&result=1',
+			// 						'text' => 'drink coffee'
+			// 					],
+			// 					[
+			// 						'type' => 'postback',
+			// 						'label' => 'sleep',
+			// 						'data' => 'response=true&result=2',
+			// 						'text' => 'sleep'
+			// 					]
+			// 				]
+			// 			]
+			// 		]
+			// 	]
+			// ];
+			$messages =			{
+			  "type": "template",
+			  "altText": "this is a carousel template",
+			  "template": {
+			      "type": "carousel",
+			      "columns": [
+			          {
+			            "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+			            "title": "this is menu",
+			            "text": "description",
+			            "actions": [
+			                {
+			                    "type": "postback",
+			                    "label": "Buy",
+			                    "data": "action=buy&itemid=111"
+			                },
+			                {
+			                    "type": "postback",
+			                    "label": "Add to cart",
+			                    "data": "action=add&itemid=111"
+			                },
+			                {
+			                    "type": "uri",
+			                    "label": "View detail",
+			                    "uri": "http://example.com/page/111"
+			                }
+			            ]
+			          },
+			          {
+			            "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
+			            "title": "this is menu",
+			            "text": "description",
+			            "actions": [
+			                {
+			                    "type": "postback",
+			                    "label": "Buy",
+			                    "data": "action=buy&itemid=222"
+			                },
+			                {
+			                    "type": "postback",
+			                    "label": "Add to cart",
+			                    "data": "action=add&itemid=222"
+			                },
+			                {
+			                    "type": "uri",
+			                    "label": "View detail",
+			                    "uri": "http://example.com/page/222"
+			                }
+			            ]
+			          }
+			      ]
+			  }
+			};
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
