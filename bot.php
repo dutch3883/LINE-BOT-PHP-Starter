@@ -114,7 +114,7 @@ if (!is_null($events['events'])) {
 
 			$result = curl_exec($ch);
 
-
+			error_log("hello, this is a test! ".$result);
 			$messages = [
 				'type' => 'text',
 				'text' => ''.$result
