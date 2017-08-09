@@ -18,66 +18,66 @@ if (!is_null($events['events'])) {
 			$userId = $event['source']['userId'];
 			
 			//Build message to reply back
-			$messages = [
+			$messages1 = [
 				'type' => 'text',
 				'text' => 'replyToken: '.$replyToken
 			];
 
-			// $messages = [
-			// 	'type' => 	'template',
-			// 	'altText' =>  'alternative text',
-			// 	'template' => [
-			// 		'type'	=> 'carousel',
-			// 		'columns' => [
-			// 			[
-			// 				'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-			// 				'title' => 'test carousel',
-			// 				'text' => 'Select Where to eat today',
-			// 				'actions' => [
-			// 					[
-			// 						'type' => 'postback',
-			// 						'label' => 'Kuayteaw',
-			// 						'data' => 'response=true&result=1',
-			// 						'text' => 'Kuayteaw'
-			// 					],
-			// 					[
-			// 						'type' => 'postback',
-			// 						'label' => 'floor 2 parking building',
-			// 						'data' => 'response=true&result=2',
-			// 						'text' => 'floor 2 parking building'
-			// 					]
+			$messages = [
+				'type' => 	'template',
+				'altText' =>  'alternative text',
+				'template' => [
+					'type'	=> 'carousel',
+					'columns' => [
+						[
+							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'title' => 'test carousel',
+							'text' => 'Select Where to eat today',
+							'actions' => [
+								[
+									'type' => 'postback',
+									'label' => 'Kuayteaw',
+									'data' => 'response=true&result=1',
+									'text' => 'Kuayteaw'
+								],
+								[
+									'type' => 'postback',
+									'label' => 'floor 2 parking building',
+									'data' => 'response=true&result=2',
+									'text' => 'floor 2 parking building'
+								]
 								
-			// 				]
-			// 			],
-			// 			[
-			// 				'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-			// 				'title' => 'test carousel',
-			// 				'text' => 'Wont eat',
-			// 				'actions' => [
-			// 					[
-			// 						'type' => 'postback',
-			// 						'label' => 'drink coffee',
-			// 						'data' => 'response=true&result=1',
-			// 						'text' => 'drink coffee'
-			// 					],
-			// 					[
-			// 						'type' => 'postback',
-			// 						'label' => 'sleep',
-			// 						'data' => 'response=true&result=2',
-			// 						'text' => 'sleep'
-			// 					]
-			// 				]
-			// 			]
-			// 		]
-			// 	]
-			// ];
+							]
+						],
+						[
+							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'title' => 'test carousel',
+							'text' => 'Wont eat',
+							'actions' => [
+								[
+									'type' => 'postback',
+									'label' => 'drink coffee',
+									'data' => 'response=true&result=1',
+									'text' => 'drink coffee'
+								],
+								[
+									'type' => 'postback',
+									'label' => 'sleep',
+									'data' => 'response=true&result=2',
+									'text' => 'sleep'
+								]
+							]
+						]
+					]
+				]
+			];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$messages1,$messages],
 			];
 
 			$post = json_encode($data);
@@ -98,4 +98,5 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+echo '$url'
 echo "OK";
