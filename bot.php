@@ -73,7 +73,6 @@ if (!is_null($events['events'])) {
 			// 	'type' => 'text',
 			// 	'text' => 'replyToken: '.$replyToken
 			// ];
-
 			$messages = [
 				'type' => 'template',
 				'altText' => 'this is aconfirm template',
@@ -114,6 +113,21 @@ if (!is_null($events['events'])) {
 			
 
 			$result = curl_exec($ch);
+
+
+			$messages = [
+				'type' => 'text',
+				'text' => ''.$result
+			];
+
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages]
+			];
+
+			$post = json_encode($data);
+
+			$result = curl_exec($result);
 			curl_close($ch);
 
 			echo $result . "\r\n";
