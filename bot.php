@@ -81,11 +81,11 @@ if (!is_null($events['events'])) {
 					'text' => 'Are you sure?',
 					'actions' => [
 						[
-							'type' => 'messages',
+							'type' => 'message',
 							'label' => 'yes',
 							'text' => 'yes'
 						],
-						[	'type' => 'messages',
+						[	'type' => 'message',
 							'label' => 'No',
 							'text' => 'no'
 						]
