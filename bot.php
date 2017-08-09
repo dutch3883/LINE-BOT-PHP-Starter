@@ -12,16 +12,16 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' ) {
 			// Get text sent
-			$text = $event['message'];
+			$messages = $event['message'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			$userId = $event['source']['userId'];
 			
 			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => json_encode($text)
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => json_encode($text)
+			// ];
 
 
 
