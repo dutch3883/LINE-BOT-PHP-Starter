@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 								'type' => 'postback',
 								'lable' => 'floor 2 parking building',
 								'data' => 'response=true&result=2'
-							],
+							]
 							
 						]
 					],
@@ -58,8 +58,7 @@ if (!is_null($events['events'])) {
 								'type' => 'postback',
 								'lable' => 'sleep',
 								'data' => 'response=true&result=2'
-							],
-							
+							]
 						]
 					]
 				]
