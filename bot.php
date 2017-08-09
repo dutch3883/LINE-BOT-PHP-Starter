@@ -114,20 +114,8 @@ if (!is_null($events['events'])) {
 
 			$result = curl_exec($ch);
 
+			error_log("hello, this is a test! ".json_encode($result));
 			error_log("hello, this is a test! ".$result);
-			$messages = [
-				'type' => 'text',
-				'text' => ''.$result
-			];
-
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages]
-			];
-
-			$post = json_encode($data);
-
-			$result = curl_exec($result);
 			curl_close($ch);
 
 			echo $result . "\r\n";
