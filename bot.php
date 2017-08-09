@@ -68,31 +68,31 @@ if (!is_null($events['events'])) {
 			// 		]
 			// 	]
 			// ];
-			
-			$messages = [
-				'type' => 'text',
-				'text' => 'replyToken: '.$replyToken
-			];
 
 			// $messages = [
-			// 	'type' => 'template',
-			// 	'altText' => 'this is aconfirm template',
-			// 	'template' => [
-			// 		'type' => 'confirm',
-			// 		'text' => 'Are you sure?',
-			// 		'actions' => [
-			// 			[
-			// 				'type' => 'messages',
-			// 				'label' => 'yes',
-			// 				'text' => 'yes'
-			// 			],
-			// 			[	'type' => 'messages'
-			// 				'label' => 'No',
-			// 				'text' => 'no'
-			// 			]
-			// 		]
-			// 	]
+			// 	'type' => 'text',
+			// 	'text' => 'replyToken: '.$replyToken
 			// ];
+
+			$messages = [
+				'type' => 'template',
+				'altText' => 'this is aconfirm template',
+				'template' => [
+					'type' => 'confirm',
+					'text' => 'Are you sure?',
+					'actions' => [
+						[
+							'type' => 'messages',
+							'label' => 'yes',
+							'text' => 'yes'
+						],
+						[	'type' => 'messages',
+							'label' => 'No',
+							'text' => 'no'
+						]
+					]
+				]
+			];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
