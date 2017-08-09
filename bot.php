@@ -98,5 +98,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo '$url'
 echo "OK";
