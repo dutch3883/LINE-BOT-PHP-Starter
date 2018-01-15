@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 					'type'	=> 'carousel',
 					'columns' => [
 						[
-							//'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'thumbnailImageUrl' => 'https://static.zerochan.net/K-ON%21.full.610518.jpg',
 							'title' => 'test carousel',
 							'text' => 'Select Where to eat today',
 							'actions' => [
@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 							]
 						],
 						[
-							//'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							'thumbnailImageUrl' => 'https://static.zerochan.net/Kyoukai.no.Kanata.full.1903992.jpg',
 							'title' => 'test carousel',
 							'text' => 'Wont eat',
 							'actions' => [
