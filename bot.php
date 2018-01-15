@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 					'type'	=> 'carousel',
 					'columns' => [
 						[
-							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							//'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
 							'title' => 'test carousel',
 							'text' => 'Select Where to eat today',
 							'actions' => [
@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 							]
 						],
 						[
-							'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+							//'thumbnailImageUrl' => 'https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
 							'title' => 'test carousel',
 							'text' => 'Wont eat',
 							'actions' => [
